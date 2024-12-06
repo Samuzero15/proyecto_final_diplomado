@@ -17,7 +17,8 @@ return new class extends Migration
             $table->integer('precio')->unsigned()->default(0);
             $table->string('nombre', 100)->default('Camisa');
             $table->string('color', 25)->nullable()->default('text');
-            $table->string('marca', 50)->default('Camisa');
+            $table->string('marca', 25)->default('Camisa');
+            $table->string('material', 25)->default('Camisa');
             $table->char('talla', 2)->default('text');
             $table->integer('stock')->unsigned()->default(0);
         });
