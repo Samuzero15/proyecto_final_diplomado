@@ -13,7 +13,7 @@
         </a>
         <ul class="nav nav-treeview">
           <li class="nav-item">
-            <a href="{{ asset('categorias.index') }}" class="nav-link ">
+            <a href="{{ route('categorias.index') }}" class="nav-link ">
               <i class="far fa-circle nav-icon"></i>
               <p>Listado</p>
             </a>
@@ -36,7 +36,7 @@
         </a>
         <ul class="nav nav-treeview">
           <li class="nav-item">
-            <a href="{{ asset('productos.index') }}" class="nav-link ">
+            <a href="{{ route('productos.index') }}" class="nav-link ">
               <i class="far fa-circle nav-icon"></i>
               <p>Listado</p>
             </a>

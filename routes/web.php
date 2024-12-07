@@ -2,6 +2,8 @@
 
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\CategoriaController;
+use App\Http\Controllers\ProductoController;
 
 /*
 |--------------------------------------------------------------------------
