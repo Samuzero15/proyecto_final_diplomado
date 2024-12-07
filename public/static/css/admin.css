@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    font-size: 14px;
+    font-family: "Roboto", sans-serif;
+    background-color: #f5f6fa;
+}
+
+.wrapper{
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+.col1{
+    float: left;
+    position: relative;
+    z-index: 999;
+    width: 17%;
+}
+
+.col2{
+    float: left;
+    width: 83%;
+}
+
+.sidebar{
+    background-color: #fff;
+    min-height: 100vh;
+}
+
+.section-top{
+    background-color: #9eb7f5;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+
+.logo{
+    display: block;
+    margin: 0 auto;
+    padding-top: 24px;
+    width: 60%;
+}
+
+.user{
+    color: #fff !important;
+    padding: 16px;
+}
+
+.user a{
+    color: #fff;
+    font-size: 1.2em;
+}
+
+.main ul li{
+    margin-bottom: 5px;
+}
+
+.main ul li a{
+    color: #8998ac !important;
+    display: block;
+    font-size: 1.1em;
+    padding: 12px;
+    text-decoration: none;
+}
+
+.main ul li a svg{
+    margin-right: 10px;
+}
+
+.main ul li a svg:hover{
+    background-color: #9eb7f5;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+    
+}
