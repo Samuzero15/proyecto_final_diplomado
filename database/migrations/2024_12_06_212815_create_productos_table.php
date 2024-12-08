@@ -14,6 +14,7 @@ return new class extends Migration
         Schema::create('productos', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
+            $table->foreign('id_categoria')->references('id')->on('categorias')->onDelete('cascade');
             $table->integer('precio')->unsigned()->default(0);
             $table->string('nombre', 100)->default('Camisa');
             $table->string('color', 25)->nullable()->default('text');
