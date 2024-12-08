@@ -4,10 +4,17 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Producto extends Model
 {
     use HasFactory;
+    use SoftDeletes; //Indica la utilizacion de la funcionalidad de soft deletes
+                      // o lo que es lo mismo, borrado logico.
+    protected $fillable = [
+         'descripcion', 'cantidad', 'precio', 'stock'
+     ];
+
     /**
      * Get the categoria that owns the Producto
      *

@@ -12,7 +12,9 @@ class ProductoController extends Controller
      */
     public function index()
     {
-        //
+        $productos = Producto::orderBy('id')->paginate(20);
+
+        return view('admin.productos.index', compact('productos'));
     }
 
     /**

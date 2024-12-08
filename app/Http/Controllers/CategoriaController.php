@@ -3,7 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Models\Categoria;
-use Illuminate\Http\Request;
+use App\Http\Requests\StoreCategoriaRequest;
+use App\Http\Requests\UpdateCategoriaRequest;
 
 class CategoriaController extends Controller
 {
@@ -12,54 +13,56 @@ class CategoriaController extends Controller
      */
     public function index()
     {
-        //
+        $categorias = Categoria::orderBy('id', 'desc')->paginate(15);
+        return view('admin.categorias.index', compact('categorias'));
+
+        //$categorias = Categoria::all();
+        //return view('admin.categorias.index', ['categorias' => $categorias]);
     }
 
-    /**
-     * Show the form for creating a new resource.
-     */
+
     public function create()
     {
-        //
+        return view('admin.categorias.crear');
     }
 
-    /**
-     * Store a newly created resource in storage.
-     */
-    public function store(Request $request)
+
+    public function store(StoreCategoriaRequest $request)
     {
-        //
+        Categoria::create([
+            'nombre' => $request->input('nombre'),
+            'mostrar' => $request->input('mostrar') == 'verdadero' ? true : false
+        ]);
+
+        return redirect()->route('categorias.index')
+                         ->with('mensaje','Categoria creada exitosamente.');
     }
 
-    /**
-     * Display the specified resource.
-     */
     public function show(Categoria $categoria)
     {
-        //
+        return view('admin.categorias.mostrar', compact('categoria'));
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     */
     public function edit(Categoria $categoria)
     {
-        //
+        return view('admin.categorias.editar', compact('categoria'));
     }
 
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(Request $request, Categoria $categoria)
+
+    public function update(UpdateCategoriaRequest $request, Categoria $categoria)
     {
-        //
+
+        $categoria->nombre = $request->input('nombre');
+        $categoria->mostrar = $request->input('mostrar')  == 'verdadero' ? true : false;
+        $categoria->save();
+
+        return redirect()->route('categorias.index')->with('mensaje','Categoria actualizada exitosamente');
     }
 
-    /**
-     * Remove the specified resource from storage.
-     */
+
     public function destroy(Categoria $categoria)
     {
-        //
+        $categoria->delete();
+        return redirect()->route('categorias.index')->with('mensaje','Categoria eliminada exitosamente');
     }
 }
