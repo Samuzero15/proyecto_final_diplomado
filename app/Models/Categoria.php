@@ -6,13 +6,20 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-
 class Categoria extends Model
 {
-    /** @use HasFactory<\Database\Factories\CategoriaFactory> */
     use HasFactory;
-    use SoftDeletes; 
+    use SoftDeletes;
 
+    /**
+     * Get all of the comments for the Categoria
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function productos(): HasMany
+    {
+        return $this->hasMany(Producto::class, 'id_producto');
+    }
     /**
      * El protected $fillable nos permite indicarle a Laravel
      * cuales son los campos que se le permitirá almacenar en la Tabla
