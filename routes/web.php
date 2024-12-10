@@ -21,7 +21,7 @@ Route::get('/', function () {
 });
 
 Route::get('/dashboard', function () {
-    return view('admin.index');
+    return view('web.index');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::resource('/admin/categorias',CategoriaController::class)->names('categorias');
