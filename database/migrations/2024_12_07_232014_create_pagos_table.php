@@ -13,10 +13,12 @@ return new class extends Migration
     {
         Schema::create('pagos', function (Blueprint $table) {
             $table->id();
-            $table->foreign('id_cliente')->references('id')->on('clientes');
+            $table->bigInteger('id_cliente')->unsigned();
             $table->string('forma_de_pago', 100)->default('Contado');
             $table->integer('total')->unsigned()->default(12);
             $table->timestamps();
+
+            $table->foreign('id_cliente')->references('id')->on('clientes');
         });
     }
 

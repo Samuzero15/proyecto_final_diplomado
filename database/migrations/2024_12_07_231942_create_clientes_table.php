@@ -17,7 +17,7 @@ return new class extends Migration
             $table->string('Apellidos', 50)->default('Nuevo');
             $table->string('Correo', 50);
             $table->string('Contraseña', 20);
-            $table->text('Direccion')->nullable()->default('');
+            $table->text('Direccion')->nullable();
             $table->timestamps();
         });
     }
