@@ -8,7 +8,8 @@
     @include('web.header')
 
     <main>
-        @yield('content')
+        @yield('content')  
+      
     </main>
    
     @include('web.login')

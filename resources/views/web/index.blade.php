@@ -1,6 +1,16 @@
 @extends('web.layout')
 
 @section('content')
+<div>
+        <p><a href="{{ route('web.pages.about') }}"></a></p>
+        <p><a href="{{ route('web.pages.mens') }}"></a></p>
+        <p><a href="{{ route('web.pages.womens') }}"></a></p>
+        <p><a href="{{ route('web.pages.contact') }}"></a></p>
+        <p><a href="{{ route('web.pages.icons') }}"></a></p>
+        <p><a href="{{ route('web.pages.typography') }}"></a></p>
+        <p><a href="{{ route('web.pages.single') }}"></a></p>
+    </div>
+
 <div class="ban-top">
 	<div class="container">
 		<div class="top_nav_left">
@@ -18,35 +28,35 @@
 				<!-- Collect the nav links, forms, and other content for toggling -->
 				<div class="collapse navbar-collapse menu--shylock" id="bs-example-navbar-collapse-1">
 				  <ul class="nav navbar-nav menu__list">
-					<li class="active menu__item menu__item--current"><a class="menu__link" href="index.html">Home <span class="sr-only">(current)</span></a></li>
-					<li class=" menu__item"><a class="menu__link" href="about.html">About</a></li>
+					<li class="active menu__item menu__item--current"><a class="menu__link" href="{{ route('home') }}">Home <span class="sr-only">(current)</span></a></li>
+					<li class=" menu__item"><a class="menu__link" href="{{ route('web.pages.about') }}">About</a></li>
 					<li class="dropdown menu__item">
 						<a href="#" class="dropdown-toggle menu__link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Men's wear <span class="caret"></span></a>
 							<ul class="dropdown-menu multi-column columns-3">
 								<div class="agile_inner_drop_nav_info">
 									<div class="col-sm-6 multi-gd-img1 multi-gd-text ">
-										<a href="mens.html"><img src="images/top2.jpg" alt=" "/></a>
+										<a href="{{ route('web.pages.mens') }}"><img src="images/top2.jpg" alt=" "/></a>
 									</div>
 									<div class="col-sm-3 multi-gd-img">
 										<ul class="multi-column-dropdown">
-											<li><a href="mens.html">Clothing</a></li>
-											<li><a href="mens.html">Wallets</a></li>
-											<li><a href="mens.html">Footwear</a></li>
-											<li><a href="mens.html">Watches</a></li>
-											<li><a href="mens.html">Accessories</a></li>
-											<li><a href="mens.html">Bags</a></li>
-											<li><a href="mens.html">Caps & Hats</a></li>
+											<li><a href="{{ route('web.pages.mens') }}">Clothing</a></li>
+											<li><a href="{{ route('web.pages.mens') }}">Wallets</a></li>
+											<li><a href="{{ route('web.pages.mens') }}">Footwear</a></li>
+											<li><a href="{{ route('web.pages.mens') }}">Watches</a></li>
+											<li><a href="{{ route('web.pages.mens') }}">Accessories</a></li>
+											<li><a href="{{ route('web.pages.mens') }}">Bags</a></li>
+											<li><a href="{{ route('web.pages.mens') }}">Caps & Hats</a></li>
 										</ul>
 									</div>
 									<div class="col-sm-3 multi-gd-img">
 										<ul class="multi-column-dropdown">
-											<li><a href="mens.html">Jewellery</a></li>
-											<li><a href="mens.html">Sunglasses</a></li>
-											<li><a href="mens.html">Perfumes</a></li>
-											<li><a href="mens.html">Beauty</a></li>
-											<li><a href="mens.html">Shirts</a></li>
-											<li><a href="mens.html">Sunglasses</a></li>
-											<li><a href="mens.html">Swimwear</a></li>
+											<li><a href="{{ route('web.pages.mens') }}">Jewellery</a></li>
+											<li><a href="{{ route('web.pages.mens') }}">Sunglasses</a></li>
+											<li><a href="{{ route('web.pages.mens') }}">Perfumes</a></li>
+											<li><a href="{{ route('web.pages.mens') }}">Beauty</a></li>
+											<li><a href="{{ route('web.pages.mens') }}">Shirts</a></li>
+											<li><a href="{{ route('web.pages.mens') }}">Sunglasses</a></li>
+											<li><a href="{{ route('web.pages.mens') }}">Swimwear</a></li>
 										</ul>
 									</div>
 									<div class="clearfix"></div>
@@ -59,28 +69,28 @@
 								<div class="agile_inner_drop_nav_info">
 									<div class="col-sm-3 multi-gd-img">
 										<ul class="multi-column-dropdown">
-											<li><a href="womens.html">Clothing</a></li>
-											<li><a href="womens.html">Wallets</a></li>
-											<li><a href="womens.html">Footwear</a></li>
-											<li><a href="womens.html">Watches</a></li>
-											<li><a href="womens.html">Accessories</a></li>
-											<li><a href="womens.html">Bags</a></li>
-											<li><a href="womens.html">Caps & Hats</a></li>
+											<li><a href="{{ route('web.pages.womens') }}">Clothing</a></li>
+											<li><a href="{{ route('web.pages.womens') }}">Wallets</a></li>
+											<li><a href="{{ route('web.pages.womens') }}">Footwear</a></li>
+											<li><a href="{{ route('web.pages.womens') }}">Watches</a></li>
+											<li><a href="{{ route('web.pages.womens') }}">Accessories</a></li>
+											<li><a href="{{ route('web.pages.womens') }}">Bags</a></li>
+											<li><a href="{{ route('web.pages.womens') }}">Caps & Hats</a></li>
 										</ul>
 									</div>
 									<div class="col-sm-3 multi-gd-img">
 										<ul class="multi-column-dropdown">
-											<li><a href="womens.html">Jewellery</a></li>
-											<li><a href="womens.html">Sunglasses</a></li>
-											<li><a href="womens.html">Perfumes</a></li>
-											<li><a href="womens.html">Beauty</a></li>
-											<li><a href="womens.html">Shirts</a></li>
-											<li><a href="womens.html">Sunglasses</a></li>
-											<li><a href="womens.html">Swimwear</a></li>
+											<li><a href="{{ route('web.pages.womens') }}">Jewellery</a></li>
+											<li><a href="{{ route('web.pages.womens') }}">Sunglasses</a></li>
+											<li><a href="{{ route('web.pages.womens') }}">Perfumes</a></li>
+											<li><a href="{{ route('web.pages.womens') }}">Beauty</a></li>
+											<li><a href="{{ route('web.pages.womens') }}">Shirts</a></li>
+											<li><a href="{{ route('web.pages.womens') }}">Sunglasses</a></li>
+											<li><a href="{{ route('web.pages.womens') }}">Swimwear</a></li>
 										</ul>
 									</div>
 									<div class="col-sm-6 multi-gd-img multi-gd-text ">
-										<a href="womens.html"><img src="images/top1.jpg" alt=" "/></a>
+										<a href="{{ route('web.pages.womens') }}"><img src="images/top1.jpg" alt=" "/></a>
 									</div>
 									<div class="clearfix"></div>
 								</div>
@@ -89,11 +99,11 @@
 					<li class="menu__item dropdown">
 					   <a class="menu__link" href="#" class="dropdown-toggle" data-toggle="dropdown">Short Codes <b class="caret"></b></a>
 								<ul class="dropdown-menu agile_short_dropdown">
-									<li><a href="icons.html">Web Icons</a></li>
-									<li><a href="typography.html">Typography</a></li>
+									<li><a href="{{ route('web.pages.icons') }}">Web Icons</a></li>
+									<li><a href="{{ route('web.pages.typography') }}">Typography</a></li>
 								</ul>
 					</li>
-					<li class=" menu__item"><a class="menu__link" href="contact.html">Contact</a></li>
+					<li class=" menu__item"><a class="menu__link" href="{{ route('web.pages.contact') }}">Contact</a></li>
 				  </ul>
 				</div>
 			  </div>
@@ -244,7 +254,7 @@
 					<div class="carousel-caption">
 						<h3>The Biggest <span>Sale</span></h3>
 						<p>Special for today</p>
-						<a class="hvr-outline-out button2" href="mens.html">Shop Now </a>
+						<a class="hvr-outline-out button2" href="{{ route('web.pages.mens') }}">Shop Now </a>
 					</div>
 				</div>
 			</div>
@@ -253,7 +263,7 @@
 					<div class="carousel-caption">
 						<h3>Summer <span>Collection</span></h3>
 						<p>New Arrivals On Sale</p>
-						<a class="hvr-outline-out button2" href="mens.html">Shop Now </a>
+						<a class="hvr-outline-out button2" href="{{ route('web.pages.mens') }}">Shop Now </a>
 					</div>
 				</div>
 			</div>
@@ -262,7 +272,7 @@
 					<div class="carousel-caption">
 						<h3>The Biggest <span>Sale</span></h3>
 						<p>Special for today</p>
-						<a class="hvr-outline-out button2" href="mens.html">Shop Now </a>
+						<a class="hvr-outline-out button2" href="{{ route('web.pages.mens') }}">Shop Now </a>
 					</div>
 				</div>
 			</div>
@@ -271,7 +281,7 @@
 					<div class="carousel-caption">
 						<h3>Summer <span>Collection</span></h3>
 						<p>New Arrivals On Sale</p>
-						<a class="hvr-outline-out button2" href="mens.html">Shop Now </a>
+						<a class="hvr-outline-out button2" href="{{ route('web.pages.mens') }}">Shop Now </a>
 					</div>
 				</div>
 			</div>
@@ -280,7 +290,7 @@
 					<div class="carousel-caption">
 						<h3>The Biggest <span>Sale</span></h3>
 						<p>Special for today</p>
-						<a class="hvr-outline-out button2" href="mens.html">Shop Now </a>
+						<a class="hvr-outline-out button2" href="{{ route('web.pages.mens') }}">Shop Now </a>
 					</div>
 				</div>
 			</div> 
@@ -358,7 +368,7 @@
 		<h3 class="wthree_text_info">What's <span>Trending</span></h3>
 	
 		<div class="col-md-5 bb-grids bb-left-agileits-w3layouts">
-			<a href="womens.html">
+			<a href="{{ route('web.pages.womens') }}">
 			   <div class="bb-left-agileits-w3layouts-inner grid">
 					<figure class="effect-roxy">
 							<img src="images/bb1.jpg" alt=" " class="img-responsive" />
@@ -371,7 +381,7 @@
 			</a>
 		</div>
 		<div class="col-md-7 bb-grids bb-middle-agileits-w3layouts">
-		      <a href="mens.html">
+		      <a href="{{ route('web.pages.mens') }}">
 		       <div class="bb-middle-agileits-w3layouts grid">
 			           <figure class="effect-roxy">
 							<img src="images/bottom3.jpg" alt=" " class="img-responsive" />
@@ -382,7 +392,7 @@
 						</figure>
 		        </div>
 				</a>
-				<a href="mens.html">
+				<a href="{{ route('web.pages.mens') }}">
 		      <div class="bb-middle-agileits-w3layouts forth grid">
 						<figure class="effect-roxy">
 							<img src="images/bottom4.jpg" alt=" " class="img-responsive">
@@ -400,11 +410,11 @@
 <!--/grids-->
       <div class="agile_last_double_sectionw3ls">
             <div class="col-md-6 multi-gd-img multi-gd-text ">
-					<a href="womens.html"><img src="images/bot_1.jpg" alt=" "><h4>Flat <span>50%</span> offer</h4></a>
+					<a href="{{ route('web.pages.womens') }}"><img src="images/bot_1.jpg" alt=" "><h4>Flat <span>50%</span> offer</h4></a>
 					
 			</div>
 			 <div class="col-md-6 multi-gd-img multi-gd-text ">
-					<a href="womens.html"><img src="images/bot_2.jpg" alt=" "><h4>Flat <span>50%</span> offer</h4></a>
+					<a href="{{ route('web.pages.womens') }}"><img src="images/bot_2.jpg" alt=" "><h4>Flat <span>50%</span> offer</h4></a>
 			</div>
 			<div class="clearfix"></div>
 	   </div>							
@@ -430,14 +440,14 @@
 										<img src="images/m1.jpg" alt="" class="pro-image-back">
 											<div class="men-cart-pro">
 												<div class="inner-men-cart-pro">
-													<a href="single.html" class="link-product-add-cart">Quick View</a>
+													<a href="{{ route('web.pages.single') }}" class="link-product-add-cart">Quick View</a>
 												</div>
 											</div>
 											<span class="product-new-top">New</span>
 											
 									</div>
 									<div class="item-info-product ">
-										<h4><a href="single.html">Formal Blue Shirt</a></h4>
+										<h4><a href="{{ route('web.pages.single') }}">Formal Blue Shirt</a></h4>
 										<div class="info-product-price">
 											<span class="item_price">$45.99</span>
 											<del>$69.71</del>
@@ -469,14 +479,14 @@
 										<img src="images/m2.jpg" alt="" class="pro-image-back">
 											<div class="men-cart-pro">
 												<div class="inner-men-cart-pro">
-													<a href="single.html" class="link-product-add-cart">Quick View</a>
+													<a href="{{ route('web.pages.single') }}" class="link-product-add-cart">Quick View</a>
 												</div>
 											</div>
 											<span class="product-new-top">New</span>
 											
 									</div>
 									<div class="item-info-product ">
-										<h4><a href="single.html">Gabi Full Sleeve Sweatshirt</a></h4>
+										<h4><a href="{{ route('web.pages.single') }}">Gabi Full Sleeve Sweatshirt</a></h4>
 										<div class="info-product-price">
 											<span class="item_price">$45.99</span>
 											<del>$69.71</del>
@@ -508,14 +518,14 @@
 										<img src="images/m3.jpg" alt="" class="pro-image-back">
 											<div class="men-cart-pro">
 												<div class="inner-men-cart-pro">
-													<a href="single.html" class="link-product-add-cart">Quick View</a>
+													<a href="{{ route('web.pages.single') }}" class="link-product-add-cart">Quick View</a>
 												</div>
 											</div>
 											<span class="product-new-top">New</span>
 											
 									</div>
 									<div class="item-info-product ">
-										<h4><a href="single.html">Dark Blue Track Pants</a></h4>
+										<h4><a href="{{ route('web.pages.single') }}">Dark Blue Track Pants</a></h4>
 										<div class="info-product-price">
 											<span class="item_price">$80.99</span>
 											<del>$89.71</del>
@@ -547,14 +557,14 @@
 										<img src="images/m4.jpg" alt="" class="pro-image-back">
 											<div class="men-cart-pro">
 												<div class="inner-men-cart-pro">
-													<a href="single.html" class="link-product-add-cart">Quick View</a>
+													<a href="{{ route('web.pages.single') }}" class="link-product-add-cart">Quick View</a>
 												</div>
 											</div>
 											<span class="product-new-top">New</span>
 											
 									</div>
 									<div class="item-info-product ">
-										<h4><a href="single.html">Round Neck Black T-Shirt</a></h4>
+										<h4><a href="{{ route('web.pages.single') }}">Round Neck Black T-Shirt</a></h4>
 										<div class="info-product-price">
 											<span class="item_price">$190.99</span>
 											<del>$159.71</del>
@@ -586,14 +596,14 @@
 										<img src="images/m5.jpg" alt="" class="pro-image-back">
 											<div class="men-cart-pro">
 												<div class="inner-men-cart-pro">
-													<a href="single.html" class="link-product-add-cart">Quick View</a>
+													<a href="{{ route('web.pages.single') }}" class="link-product-add-cart">Quick View</a>
 												</div>
 											</div>
 											<span class="product-new-top">New</span>
 											
 									</div>
 									<div class="item-info-product ">
-										<h4><a href="single.html">Men's Black Jeans</a></h4>
+										<h4><a href="{{ route('web.pages.single') }}">Men's Black Jeans</a></h4>
 										<div class="info-product-price">
 											<span class="item_price">$60.99</span>
 											<del>$90.71</del>
@@ -625,14 +635,14 @@
 										<img src="images/m7.jpg" alt="" class="pro-image-back">
 											<div class="men-cart-pro">
 												<div class="inner-men-cart-pro">
-													<a href="single.html" class="link-product-add-cart">Quick View</a>
+													<a href="{{ route('web.pages.single') }}" class="link-product-add-cart">Quick View</a>
 												</div>
 											</div>
 											<span class="product-new-top">New</span>
 											
 									</div>
 									<div class="item-info-product ">
-										<h4><a href="single.html">Analog Watch</a></h4>
+										<h4><a href="{{ route('web.pages.single') }}">Analog Watch</a></h4>
 										<div class="info-product-price">
 											<span class="item_price">$160.99</span>
 											<del>$290.71</del>
@@ -664,14 +674,14 @@
 										<img src="images/m6.jpg" alt="" class="pro-image-back">
 											<div class="men-cart-pro">
 												<div class="inner-men-cart-pro">
-													<a href="single.html" class="link-product-add-cart">Quick View</a>
+													<a href="{{ route('web.pages.single') }}" class="link-product-add-cart">Quick View</a>
 												</div>
 											</div>
 											<span class="product-new-top">New</span>
 											
 									</div>
 									<div class="item-info-product ">
-										<h4><a href="single.html">Reversible Belt</a></h4>
+										<h4><a href="{{ route('web.pages.single') }}">Reversible Belt</a></h4>
 										<div class="info-product-price">
 											<span class="item_price">$30.99</span>
 											<del>$50.71</del>
@@ -703,14 +713,14 @@
 										<img src="images/m8.jpg" alt="" class="pro-image-back">
 											<div class="men-cart-pro">
 												<div class="inner-men-cart-pro">
-													<a href="single.html" class="link-product-add-cart">Quick View</a>
+													<a href="{{ route('web.pages.single') }}" class="link-product-add-cart">Quick View</a>
 												</div>
 											</div>
 											<span class="product-new-top">New</span>
 											
 									</div>
 									<div class="item-info-product ">
-										<h4><a href="single.html">Party Men's Blazer</a></h4>
+										<h4><a href="{{ route('web.pages.single') }}">Party Men's Blazer</a></h4>
 										<div class="info-product-price">
 											<span class="item_price">$260.99</span>
 											<del>$390.71</del>
@@ -747,14 +757,14 @@
 										<img src="images/w1.jpg" alt="" class="pro-image-back">
 											<div class="men-cart-pro">
 												<div class="inner-men-cart-pro">
-													<a href="single.html" class="link-product-add-cart">Quick View</a>
+													<a href="{{ route('web.pages.single') }}" class="link-product-add-cart">Quick View</a>
 												</div>
 											</div>
 											<span class="product-new-top">New</span>
 											
 									</div>
 									<div class="item-info-product ">
-										<h4><a href="single.html">A-line Black Skirt</a></h4>
+										<h4><a href="{{ route('web.pages.single') }}">A-line Black Skirt</a></h4>
 										<div class="info-product-price">
 											<span class="item_price">$130.99</span>
 											<del>$189.71</del>
@@ -786,14 +796,14 @@
 										<img src="images/w2.jpg" alt="" class="pro-image-back">
 											<div class="men-cart-pro">
 												<div class="inner-men-cart-pro">
-													<a href="single.html" class="link-product-add-cart">Quick View</a>
+													<a href="{{ route('web.pages.single') }}" class="link-product-add-cart">Quick View</a>
 												</div>
 											</div>
 											<span class="product-new-top">New</span>
 											
 									</div>
 									<div class="item-info-product ">
-										<h4><a href="single.html">Sleeveless Solid Blue Top</a></h4>
+										<h4><a href="{{ route('web.pages.single') }}">Sleeveless Solid Blue Top</a></h4>
 										<div class="info-product-price">
 											<span class="item_price">$140.99</span>
 											<del>$189.71</del>
@@ -825,14 +835,14 @@
 										<img src="images/w3.jpg" alt="" class="pro-image-back">
 											<div class="men-cart-pro">
 												<div class="inner-men-cart-pro">
-													<a href="single.html" class="link-product-add-cart">Quick View</a>
+													<a href="{{ route('web.pages.single') }}" class="link-product-add-cart">Quick View</a>
 												</div>
 											</div>
 											<span class="product-new-top">New</span>
 											
 									</div>
 									<div class="item-info-product ">
-										<h4><a href="single.html">Skinny Jeans</a></h4>
+										<h4><a href="{{ route('web.pages.single') }}">Skinny Jeans</a></h4>
 										<div class="info-product-price">
 											<span class="item_price">$150.99</span>
 											<del>$189.71</del>
@@ -864,14 +874,14 @@
 										<img src="images/w4.jpg" alt="" class="pro-image-back">
 											<div class="men-cart-pro">
 												<div class="inner-men-cart-pro">
-													<a href="single.html" class="link-product-add-cart">Quick View</a>
+													<a href="{{ route('web.pages.single') }}" class="link-product-add-cart">Quick View</a>
 												</div>
 											</div>
 											<span class="product-new-top">New</span>
 											
 									</div>
 									<div class="item-info-product ">
-										<h4><a href="single.html">Black Basic Shorts</a></h4>
+										<h4><a href="{{ route('web.pages.single') }}">Black Basic Shorts</a></h4>
 										<div class="info-product-price">
 											<span class="item_price">$120.99</span>
 											<del>$189.71</del>
@@ -903,14 +913,14 @@
 										<img src="images/w5.jpg" alt="" class="pro-image-back">
 											<div class="men-cart-pro">
 												<div class="inner-men-cart-pro">
-													<a href="single.html" class="link-product-add-cart">Quick View</a>
+													<a href="{{ route('web.pages.single') }}" class="link-product-add-cart">Quick View</a>
 												</div>
 											</div>
 											<span class="product-new-top">New</span>
 											
 									</div>
 									<div class="item-info-product ">
-										<h4><a href="single.html">Pink Track Pants</a></h4>
+										<h4><a href="{{ route('web.pages.single') }}">Pink Track Pants</a></h4>
 										<div class="info-product-price">
 											<span class="item_price">$220.99</span>
 											<del>$389.71</del>
@@ -942,14 +952,14 @@
 										<img src="images/w6.jpg" alt="" class="pro-image-back">
 											<div class="men-cart-pro">
 												<div class="inner-men-cart-pro">
-													<a href="single.html" class="link-product-add-cart">Quick View</a>
+													<a href="{{ route('web.pages.single') }}" class="link-product-add-cart">Quick View</a>
 												</div>
 											</div>
 											<span class="product-new-top">New</span>
 											
 									</div>
 									<div class="item-info-product ">
-										<h4><a href="single.html">Analog Watch</a></h4>
+										<h4><a href="{{ route('web.pages.single') }}">Analog Watch</a></h4>
 										<div class="info-product-price">
 											<span class="item_price">$320.99</span>
 											<del>$489.71</del>
@@ -981,14 +991,14 @@
 										<img src="images/w7.jpg" alt="" class="pro-image-back">
 											<div class="men-cart-pro">
 												<div class="inner-men-cart-pro">
-													<a href="single.html" class="link-product-add-cart">Quick View</a>
+													<a href="{{ route('web.pages.single') }}" class="link-product-add-cart">Quick View</a>
 												</div>
 											</div>
 											<span class="product-new-top">New</span>
 											
 									</div>
 									<div class="item-info-product ">
-										<h4><a href="single.html">Ankle Length Socks</a></h4>
+										<h4><a href="{{ route('web.pages.single') }}">Ankle Length Socks</a></h4>
 										<div class="info-product-price">
 											<span class="item_price">$100.99</span>
 											<del>$159.71</del>
@@ -1020,14 +1030,14 @@
 										<img src="images/w8.jpg" alt="" class="pro-image-back">
 											<div class="men-cart-pro">
 												<div class="inner-men-cart-pro">
-													<a href="single.html" class="link-product-add-cart">Quick View</a>
+													<a href="{{ route('web.pages.single') }}" class="link-product-add-cart">Quick View</a>
 												</div>
 											</div>
 											<span class="product-new-top">New</span>
 											
 									</div>
 									<div class="item-info-product ">
-										<h4><a href="single.html">Reebok Women's Tights</a></h4>
+										<h4><a href="{{ route('web.pages.single') }}">Reebok Women's Tights</a></h4>
 										<div class="info-product-price">
 											<span class="item_price">$130.99</span>
 											<del>$169.71</del>
@@ -1064,14 +1074,14 @@
 										<img src="images/b1.jpg" alt="" class="pro-image-back">
 											<div class="men-cart-pro">
 												<div class="inner-men-cart-pro">
-													<a href="single.html" class="link-product-add-cart">Quick View</a>
+													<a href="{{ route('web.pages.single') }}" class="link-product-add-cart">Quick View</a>
 												</div>
 											</div>
 											<span class="product-new-top">New</span>
 											
 									</div>
 									<div class="item-info-product ">
-										<h4><a href="single.html">Laptop Messenger Bag</a></h4>
+										<h4><a href="{{ route('web.pages.single') }}">Laptop Messenger Bag</a></h4>
 										<div class="info-product-price">
 											<span class="item_price">$140.99</span>
 											<del>$169.71</del>
@@ -1103,14 +1113,14 @@
 										<img src="images/b2.jpg" alt="" class="pro-image-back">
 											<div class="men-cart-pro">
 												<div class="inner-men-cart-pro">
-													<a href="single.html" class="link-product-add-cart">Quick View</a>
+													<a href="{{ route('web.pages.single') }}" class="link-product-add-cart">Quick View</a>
 												</div>
 											</div>
 											<span class="product-new-top">New</span>
 											
 									</div>
 									<div class="item-info-product ">
-										<h4><a href="single.html">Puma Backpack</a></h4>
+										<h4><a href="{{ route('web.pages.single') }}">Puma Backpack</a></h4>
 										<div class="info-product-price">
 											<span class="item_price">$127.99</span>
 											<del>$169.71</del>
@@ -1142,14 +1152,14 @@
 										<img src="images/b3.jpg" alt="" class="pro-image-back">
 											<div class="men-cart-pro">
 												<div class="inner-men-cart-pro">
-													<a href="single.html" class="link-product-add-cart">Quick View</a>
+													<a href="{{ route('web.pages.single') }}" class="link-product-add-cart">Quick View</a>
 												</div>
 											</div>
 											<span class="product-new-top">New</span>
 											
 									</div>
 									<div class="item-info-product ">
-										<h4><a href="single.html"> Laptop Backpack</a></h4>
+										<h4><a href="{{ route('web.pages.single') }}"> Laptop Backpack</a></h4>
 										<div class="info-product-price">
 											<span class="item_price">$120.99</span>
 											<del>$189.71</del>
@@ -1181,14 +1191,14 @@
 										<img src="images/b4.jpg" alt="" class="pro-image-back">
 											<div class="men-cart-pro">
 												<div class="inner-men-cart-pro">
-													<a href="single.html" class="link-product-add-cart">Quick View</a>
+													<a href="{{ route('web.pages.single') }}" class="link-product-add-cart">Quick View</a>
 												</div>
 											</div>
 											<span class="product-new-top">New</span>
 											
 									</div>
 									<div class="item-info-product ">
-										<h4><a href="single.html">Travel Duffel Bag </a></h4>
+										<h4><a href="{{ route('web.pages.single') }}">Travel Duffel Bag </a></h4>
 										<div class="info-product-price">
 											<span class="item_price">$190.99</span>
 											<del>$259.71</del>
@@ -1220,14 +1230,14 @@
 										<img src="images/b5.jpg" alt="" class="pro-image-back">
 											<div class="men-cart-pro">
 												<div class="inner-men-cart-pro">
-													<a href="single.html" class="link-product-add-cart">Quick View</a>
+													<a href="{{ route('web.pages.single') }}" class="link-product-add-cart">Quick View</a>
 												</div>
 											</div>
 											<span class="product-new-top">New</span>
 											
 									</div>
 									<div class="item-info-product ">
-										<h4><a href="single.html"> Hand-held Bag </a></h4>
+										<h4><a href="{{ route('web.pages.single') }}"> Hand-held Bag </a></h4>
 										<div class="info-product-price">
 											<span class="item_price">$190.99</span>
 											<del>$259.71</del>
@@ -1259,14 +1269,14 @@
 										<img src="images/b6.jpg" alt="" class="pro-image-back">
 											<div class="men-cart-pro">
 												<div class="inner-men-cart-pro">
-													<a href="single.html" class="link-product-add-cart">Quick View</a>
+													<a href="{{ route('web.pages.single') }}" class="link-product-add-cart">Quick View</a>
 												</div>
 											</div>
 											<span class="product-new-top">New</span>
 											
 									</div>
 									<div class="item-info-product ">
-										<h4><a href="single.html">Butterflies Bag </a></h4>
+										<h4><a href="{{ route('web.pages.single') }}">Butterflies Bag </a></h4>
 										<div class="info-product-price">
 											<span class="item_price">$190.99</span>
 											<del>$259.71</del>
@@ -1298,14 +1308,14 @@
 										<img src="images/b7.jpg" alt="" class="pro-image-back">
 											<div class="men-cart-pro">
 												<div class="inner-men-cart-pro">
-													<a href="single.html" class="link-product-add-cart">Quick View</a>
+													<a href="{{ route('web.pages.single') }}" class="link-product-add-cart">Quick View</a>
 												</div>
 											</div>
 											<span class="product-new-top">New</span>
 											
 									</div>
 									<div class="item-info-product ">
-										<h4><a href="single.html">Costa Swiss Bag </a></h4>
+										<h4><a href="{{ route('web.pages.single') }}">Costa Swiss Bag </a></h4>
 										<div class="info-product-price">
 											<span class="item_price">$290.99</span>
 											<del>$359.71</del>
@@ -1337,14 +1347,14 @@
 										<img src="images/b8.jpg" alt="" class="pro-image-back">
 											<div class="men-cart-pro">
 												<div class="inner-men-cart-pro">
-													<a href="single.html" class="link-product-add-cart">Quick View</a>
+													<a href="{{ route('web.pages.single') }}" class="link-product-add-cart">Quick View</a>
 												</div>
 											</div>
 											<span class="product-new-top">New</span>
 											
 									</div>
 									<div class="item-info-product ">
-										<h4><a href="single.html">Noble Designs Bag </a></h4>
+										<h4><a href="{{ route('web.pages.single') }}">Noble Designs Bag </a></h4>
 										<div class="info-product-price">
 											<span class="item_price">$120.99</span>
 											<del>$159.71</del>
@@ -1380,14 +1390,14 @@
 										<img src="images/s1.jpg" alt="" class="pro-image-back">
 											<div class="men-cart-pro">
 												<div class="inner-men-cart-pro">
-													<a href="single.html" class="link-product-add-cart">Quick View</a>
+													<a href="{{ route('web.pages.single') }}" class="link-product-add-cart">Quick View</a>
 												</div>
 											</div>
 											<span class="product-new-top">New</span>
 											
 									</div>
 									<div class="item-info-product ">
-										<h4><a href="single.html">Running Shoes</a></h4>
+										<h4><a href="{{ route('web.pages.single') }}">Running Shoes</a></h4>
 										<div class="info-product-price">
 											<span class="item_price">$80.99</span>
 											<del>$89.71</del>
@@ -1419,14 +1429,14 @@
 										<img src="images/s2.jpg" alt="" class="pro-image-back">
 											<div class="men-cart-pro">
 												<div class="inner-men-cart-pro">
-													<a href="single.html" class="link-product-add-cart">Quick View</a>
+													<a href="{{ route('web.pages.single') }}" class="link-product-add-cart">Quick View</a>
 												</div>
 											</div>
 											<span class="product-new-top">New</span>
 											
 									</div>
 									<div class="item-info-product ">
-										<h4><a href="single.html">Shoetopia Lace Up</a></h4>
+										<h4><a href="{{ route('web.pages.single') }}">Shoetopia Lace Up</a></h4>
 										<div class="info-product-price">
 											<span class="item_price">$90.99</span>
 											<del>$59.71</del>
@@ -1458,14 +1468,14 @@
 										<img src="images/s3.jpg" alt="" class="pro-image-back">
 											<div class="men-cart-pro">
 												<div class="inner-men-cart-pro">
-													<a href="single.html" class="link-product-add-cart">Quick View</a>
+													<a href="{{ route('web.pages.single') }}" class="link-product-add-cart">Quick View</a>
 												</div>
 											</div>
 											<span class="product-new-top">New</span>
 											
 									</div>
 									<div class="item-info-product ">
-										<h4><a href="single.html">Steemo Casuals(Black)</a></h4>
+										<h4><a href="{{ route('web.pages.single') }}">Steemo Casuals(Black)</a></h4>
 										<div class="info-product-price">
 											<span class="item_price">$90.99</span>
 											<del>$59.71</del>
@@ -1497,14 +1507,14 @@
 										<img src="images/s4.jpg" alt="" class="pro-image-back">
 											<div class="men-cart-pro">
 												<div class="inner-men-cart-pro">
-													<a href="single.html" class="link-product-add-cart">Quick View</a>
+													<a href="{{ route('web.pages.single') }}" class="link-product-add-cart">Quick View</a>
 												</div>
 											</div>
 											<span class="product-new-top">New</span>
 											
 									</div>
 									<div class="item-info-product ">
-										<h4><a href="single.html">Benetton Flip Flops</a></h4>
+										<h4><a href="{{ route('web.pages.single') }}">Benetton Flip Flops</a></h4>
 										<div class="info-product-price">
 											<span class="item_price">$40.99</span>
 											<del>$99.71</del>
@@ -1536,14 +1546,14 @@
 										<img src="images/s5.jpg" alt="" class="pro-image-back">
 											<div class="men-cart-pro">
 												<div class="inner-men-cart-pro">
-													<a href="single.html" class="link-product-add-cart">Quick View</a>
+													<a href="{{ route('web.pages.single') }}" class="link-product-add-cart">Quick View</a>
 												</div>
 											</div>
 											<span class="product-new-top">New</span>
 											
 									</div>
 									<div class="item-info-product ">
-										<h4><a href="single.html">Moonwalk Bellies </a></h4>
+										<h4><a href="{{ route('web.pages.single') }}">Moonwalk Bellies </a></h4>
 										<div class="info-product-price">
 											<span class="item_price">$80.99</span>
 											<del>$99.71</del>
@@ -1575,14 +1585,14 @@
 										<img src="images/s6.jpg" alt="" class="pro-image-back">
 											<div class="men-cart-pro">
 												<div class="inner-men-cart-pro">
-													<a href="single.html" class="link-product-add-cart">Quick View</a>
+													<a href="{{ route('web.pages.single') }}" class="link-product-add-cart">Quick View</a>
 												</div>
 											</div>
 											<span class="product-new-top">New</span>
 											
 									</div>
 									<div class="item-info-product ">
-										<h4><a href="single.html">Aero Canvas Loafers  </a></h4>
+										<h4><a href="{{ route('web.pages.single') }}">Aero Canvas Loafers  </a></h4>
 										<div class="info-product-price">
 											<span class="item_price">$120.99</span>
 											<del>$199.71</del>
@@ -1614,14 +1624,14 @@
 										<img src="images/s7.jpg" alt="" class="pro-image-back">
 											<div class="men-cart-pro">
 												<div class="inner-men-cart-pro">
-													<a href="single.html" class="link-product-add-cart">Quick View</a>
+													<a href="{{ route('web.pages.single') }}" class="link-product-add-cart">Quick View</a>
 												</div>
 											</div>
 											<span class="product-new-top">New</span>
 											
 									</div>
 									<div class="item-info-product ">
-										<h4><a href="single.html">Sparx Sporty Canvas Shoes</a></h4>
+										<h4><a href="{{ route('web.pages.single') }}">Sparx Sporty Canvas Shoes</a></h4>
 										<div class="info-product-price">
 											<span class="item_price">$160.99</span>
 											<del>$199.71</del>
@@ -1653,14 +1663,14 @@
 										<img src="images/s8.jpg" alt="" class="pro-image-back">
 											<div class="men-cart-pro">
 												<div class="inner-men-cart-pro">
-													<a href="single.html" class="link-product-add-cart">Quick View</a>
+													<a href="{{ route('web.pages.single') }}" class="link-product-add-cart">Quick View</a>
 												</div>
 											</div>
 											<span class="product-new-top">New</span>
 											
 									</div>
 									<div class="item-info-product ">
-										<h4><a href="single.html">Women BLACK Heels</a></h4>
+										<h4><a href="{{ route('web.pages.single') }}">Women BLACK Heels</a></h4>
 										<div class="info-product-price">
 											<span class="item_price">$180.99</span>
 											<del>$199.71</del>
@@ -1697,7 +1707,7 @@
 			<div class="container">
 				<h6>We Offer Flat <span>40%</span> Discount</h6>
  
-				<a class="hvr-outline-out button2" href="single.html">Shop Now </a>
+				<a class="hvr-outline-out button2" href="{{ route('web.pages.single') }}">Shop Now </a>
 			</div>
 		</div>
 	<!-- //we-offer -->
