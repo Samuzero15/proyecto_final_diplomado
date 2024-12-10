@@ -38,7 +38,7 @@
       </div>
       <div class="form-group">
         <label for="nombre" class="form-label">
-            Mostrar: {{ $categoria->mostrar ? 'Visible' : 'No Visible' }}
+            Mostrar: {{ $categoria->ocultar == 0 ? 'Visible' : 'No visible' }}
         </label>
       </div>
       <div class="form-group">

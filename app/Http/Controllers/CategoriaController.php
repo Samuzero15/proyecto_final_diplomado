@@ -26,17 +26,21 @@ class CategoriaController extends Controller
         return view('admin.categorias.crear');
     }
 
-
     public function store(StoreCategoriaRequest $request)
     {
+        // Obtener los datos validados
+        $validated = $request->validated();
+
+        // Crear la categoría, con 'ocultar' convertido a booleano
         Categoria::create([
-            'nombre' => $request->input('nombre'),
-            'mostrar' => $request->input('mostrar') == 'verdadero' ? true : false
+            'nombre' => $validated['nombre'],
+            'ocultar' => $validated['mostrar']
         ]);
 
         return redirect()->route('categorias.index')
-                         ->with('mensaje','Categoria creada exitosamente.');
+                         ->with('mensaje', 'Categoría creada exitosamente.');
     }
+
 
     public function show(Categoria $categoria)
     {
@@ -49,14 +53,20 @@ class CategoriaController extends Controller
     }
 
 
-    public function update(UpdateCategoriaRequest $request, Categoria $categoria)
+    public function update(UpdateCategoriaRequest $request, $id)
     {
+        $categoria = Categoria::findOrFail($id);
 
-        $categoria->nombre = $request->input('nombre');
-        $categoria->mostrar = $request->input('mostrar')  == 'verdadero' ? true : false;
-        $categoria->save();
+        $validated = $request->validated();
 
-        return redirect()->route('categorias.index')->with('mensaje','Categoria actualizada exitosamente');
+        $categoria->update([
+            'nombre' => $validated['nombre'],
+            'ocultar' => $validated['mostrar'],  
+        ]);
+
+        // Redirigir de vuelta con mensaje de éxito
+        return redirect()->route('categorias.index')
+                         ->with('mensaje', 'Categoría actualizada exitosamente.');
     }
 
 

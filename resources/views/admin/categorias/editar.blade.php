@@ -50,9 +50,9 @@
       </div>
       <div class="form-group">
         <label for="mostrar" class="form-label">Mostrar</label>
-        <select class="custom-select" id="mostrar" name="mostrar" value={{ $categoria->mostrar }}>
-          <option {{ $categoria->mostrar == 0 ? 'selected' : '' }} value='falso'>No visible</option>
-          <option {{ $categoria->mostrar == 1 ? 'selected' : '' }} value='verdadero'>Visible</option>
+        <select class="custom-select" id="mostrar" name="mostrar">
+          <option value="0" {{ $categoria->ocultar == 0 ? 'selected' : '' }}>Visible</option>
+          <option value="1" {{ $categoria->ocultar == 1 ? 'selected' : '' }}>No visible</option>
         </select>
       </div>
     </div>

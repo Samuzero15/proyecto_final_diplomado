@@ -26,7 +26,7 @@
   <!-- form start -->
 
   <form action="{{ route('categorias.store') }}" method="post">
-      @csrf
+    @csrf
     <div class="card-body">
       @if ($errors->any())
           <div class="alert alert-danger alert-dismissible">
@@ -45,8 +45,8 @@
       <div class="form-group">
         <label for="mostrar" class="form-label">Mostrar</label>
         <select class="custom-select" id="mostrar" name="mostrar">
-          <option selected value='falso'>No visible</option>
-          <option value='verdadero'>Visible</option>
+          <option value='1'>No visible</option>
+          <option value='0'>Visible</option>
         </select>
       </div>
     </div>
