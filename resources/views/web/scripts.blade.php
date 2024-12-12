@@ -64,4 +64,8 @@
 								
 			});
 	</script>
+<script src="{{ asset('js/responsiveslides.min.js') }}"></script>
+<script src="{{ asset('js/jquery.flexslider.js') }}"></script>
+<script src="{{ asset('js/imagezoom.js') }}"></script>
+<script type="text/javascript" src="{{ asset('js/jquery-ui.js') }}"></script>
 <script type="text/javascript" src="{{ asset('js/bootstrap.js') }}"></script>
