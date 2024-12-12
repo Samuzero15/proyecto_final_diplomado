@@ -49,8 +49,8 @@
         <input type="text" class="form-control" id="nombre" name="nombre" value="{{ $categoria->nombre }}">
       </div>
       <div class="form-group">
-        <label for="mostrar" class="form-label">Mostrar</label>
-        <select class="custom-select" id="mostrar" name="mostrar">
+        <label for="ocultar" class="form-label">Mostrar</label>
+        <select class="custom-select" id="ocultar" name="ocultar">
           <option value="0" {{ $categoria->ocultar == 0 ? 'selected' : '' }}>Visible</option>
           <option value="1" {{ $categoria->ocultar == 1 ? 'selected' : '' }}>No visible</option>
         </select>

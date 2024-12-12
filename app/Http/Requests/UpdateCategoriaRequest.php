@@ -32,7 +32,7 @@ class UpdateCategoriaRequest extends FormRequest
                 'max:255', 
                 Rule::unique('categorias')->ignore($categoriaId), // Evitar que el nombre sea único, pero ignorando la categoría actual
             ],
-            'mostrar' => 'required|in:0,1', // Validación para asegurar que 'mostrar' sea 0 o 1
+            'ocultar' => 'required|in:0,1', // Validación para asegurar que 'mostrar' sea 0 o 1
         ];
     }
 }

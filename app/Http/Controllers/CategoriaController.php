@@ -34,7 +34,7 @@ class CategoriaController extends Controller
         // Crear la categoría, con 'ocultar' convertido a booleano
         Categoria::create([
             'nombre' => $validated['nombre'],
-            'ocultar' => $validated['mostrar']
+            'ocultar' => $validated['ocultar']
         ]);
 
         return redirect()->route('categorias.index')
@@ -61,7 +61,7 @@ class CategoriaController extends Controller
 
         $categoria->update([
             'nombre' => $validated['nombre'],
-            'ocultar' => $validated['mostrar'],  
+            'ocultar' => $validated['ocultar'],  
         ]);
 
         // Redirigir de vuelta con mensaje de éxito

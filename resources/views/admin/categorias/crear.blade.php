@@ -43,8 +43,8 @@
         <input type="text" class="form-control" id="nombre" name="nombre">
       </div>
       <div class="form-group">
-        <label for="mostrar" class="form-label">Mostrar</label>
-        <select class="custom-select" id="mostrar" name="mostrar">
+        <label for="ocultar" class="form-label">Mostrar</label>
+        <select class="custom-select" id="ocultar" name="ocultar">
           <option value='1'>No visible</option>
           <option value='0'>Visible</option>
         </select>
