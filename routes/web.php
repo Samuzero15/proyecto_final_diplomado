@@ -26,6 +26,8 @@ Route::get('/dashboard', function () {
 
 Route::resource('/admin/categorias',CategoriaController::class)->names('categorias');
 Route::resource('/admin/productos',ProductoController::class)->names('productos');
+Route::get('/productos/reporte', [ProductoController::class, 'generarReporte'])->name('productos.reporte');
+Route::get('/categorias/reporte', [CategoriaController::class, 'generarReporte'])->name('categoria.reporte');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');

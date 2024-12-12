@@ -47,7 +47,7 @@
                     <tr>
                         <td>{{ $categoria->id }}</td>
                         <td>{{ $categoria->nombre }}</td>
-                        <td>{{ $categoria->mostrar ? 'Visible' : 'No Visble' }}</td>
+                        <td>{{ $categoria->ocultar == 0 ? 'Visible' : 'No visible' }}</td>
                         <td>
                             <a class="btn btn-primary" href="{{ route('categorias.show',$categoria->id ) }}" title="Mostrar"><i class="fas fa-eye"></i> </a>
                         </td>

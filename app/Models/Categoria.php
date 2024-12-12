@@ -27,7 +27,7 @@ class Categoria extends Model
      * @var array
      */
     protected $fillable = [
-        'nombre', 'mostrar'
+        'nombre', 'ocultar'
     ];
 
     /**

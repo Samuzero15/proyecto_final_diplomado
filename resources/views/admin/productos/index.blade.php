@@ -21,7 +21,7 @@
     <div class="col">
         <div class="card">
             <div class="card-header">
-                <a href="{{ route('categorias.create') }}" class="btn btn-primary m-2 float-right">Crear</a>
+                <a href="{{ route('productos.create') }}" class="btn btn-primary m-2 float-right">Crear</a>
             </div>
             <div class="card-body">
                 @if (session('mensaje'))
@@ -37,8 +37,12 @@
                 <thead>
                     <tr align="center">
                         <th style="width: 5%">#</th>
-                        <th>Descripcion</th>
-                        <th>Cantidad</th>
+                        <th># Categoria</th>
+                        <th>Nombre</th>
+                        <th>Color</th>
+                        <th>Marca</th>
+                        <th>Material</th>
+                        <th>Talla</th>
                         <th>Precio</th>
                         <th>Existencia</th>
                         <th colspan="3" style="width: 20%">Acciones</th>
@@ -48,10 +52,14 @@
                     @foreach ($productos as $producto)
                     <tr>
                         <td>{{ $producto->id }}</td>
-                        <td>{{ $producto->descripcion }}</td>
-                        <td>{{ $producto->cantidad }}</td>
+                        <td>{{ $producto->categoria->nombre }}</td>
+                        <td>{{ $producto->nombre }}</td>
+                        <td>{{ $producto->color }}</td>
+                        <td>{{ $producto->marca }}</td>
+                        <td>{{ $producto->material }}</td>
+                        <td>{{ $producto->talla }}</td>
                         <td>{{ $producto->precio }}</td>
-                        <td>{{ $producto->existencia }}</td>
+                        <td>{{ $producto->stock }}</td>
                         <td>
                             <a class="btn btn-primary" href="{{ route('productos.show',$producto->id ) }}" title="Mostrar"><i class="fas fa-eye"></i> </a>
                         </td>
