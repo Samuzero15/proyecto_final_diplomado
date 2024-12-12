@@ -22,7 +22,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link">
+            <a href="{{ route('categoria.reporte') }}" class="nav-link">
               <i class="far fa-circle nav-icon"></i>
               <p>Reporte</p>
             </a>
@@ -48,7 +48,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link">
+            <a href="{{ route('productos.reporte') }}" class="nav-link">
               <i class="far fa-circle nav-icon"></i>
               <p>Reporte</p>
             </a>

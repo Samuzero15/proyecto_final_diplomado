@@ -7,6 +7,7 @@ use App\Http\Requests\UpdateProductRequest;
 use App\Models\Categoria;
 use App\Models\Producto;
 use Illuminate\Http\Request;
+use PDF;
 
 class ProductoController extends Controller
 {
@@ -43,6 +44,7 @@ class ProductoController extends Controller
      */
     public function show(Producto $producto)
     {
+        $producto->load('categoria');
         return view('admin.productos.mostrar', compact('producto'));
     }
 
@@ -71,5 +73,12 @@ class ProductoController extends Controller
     {
         $producto->delete();
         return redirect()->route('productos.index')->with('success', 'Producto eliminado exitosamente.');
+    }
+
+    public function generarReporte()
+    {
+        $productos = Producto::with('categoria')->get(); // Obtener todos los productos con sus categorías
+        $pdf = PDF::loadView('admin.productos.reporte', compact('productos')); // Cargar la vista del reporte
+        return $pdf->download('reporte_productos.pdf'); // Descargar el PDF
     }
 }

@@ -33,6 +33,11 @@
       </div>
       <div class="form-group">
         <label for="nombre" class="form-label">
+            Categoría: {{ $producto->categoria->nombre }}
+        </label>
+      </div>
+      <div class="form-group">
+        <label for="nombre" class="form-label">
             Nombre: {{ $producto->nombre }}
         </label>
       </div>
@@ -75,7 +80,7 @@
     <!-- /.card-body -->
 
     <div class="card-footer">
-      <a href="{{ route('categorias.index') }}" class="btn btn-link"> Regresar </a>
+      <a href="{{ route('productos.index') }}" class="btn btn-link"> Regresar </a>
     </div>
 </div>
 @endsection

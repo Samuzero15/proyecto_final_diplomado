@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Categoria;
 use App\Http\Requests\StoreCategoriaRequest;
 use App\Http\Requests\UpdateCategoriaRequest;
+use PDF;
 
 class CategoriaController extends Controller
 {
@@ -74,5 +75,12 @@ class CategoriaController extends Controller
     {
         $categoria->delete();
         return redirect()->route('categorias.index')->with('mensaje','Categoria eliminada exitosamente');
+    }
+
+    public function generarReporte()
+    {
+        $categorias = Categoria::orderBy('id', 'desc')->get(); // Obtener todos los productos con sus categorías
+        $pdf = PDF::loadView('admin.categorias.reporte', compact('categorias')); // Cargar la vista del reporte
+        return $pdf->download('reporte_categorias.pdf'); // Descargar el PDF
     }
 }

@@ -49,28 +49,39 @@
         <input type="text" class="form-control" id="nombre" name="nombre" value="{{ $producto->nombre }}">
       </div>
       <div class="form-group">
+        <label for="categoria">Categoría</label>
+        <select name="id_categoria" class="form-control" required>
+            <option value="">Selecciona una categoría</option>
+            @foreach($categorias as $categoria)
+                <option value="{{ $categoria->id }}" {{ $producto->id_categoria == $categoria->id ? 'selected' : '' }}>
+                    {{ $categoria->nombre }}
+                </option>
+            @endforeach
+        </select>
+      </div>
+      <div class="form-group">
         <label for="color" class="form-label">Color</label>
-        <input type="text" class="form-control" id="color" name="color" value="{{ $producto->color }}>
+        <input type="text" class="form-control" id="color" name="color" value="{{ $producto->color }}">
       </div>
       <div class="form-group">
         <label for="marca" class="form-label">Marca</label>
-        <input type="text" class="form-control" id="marca" name="marca" value="{{ $producto->marca }}>
+        <input type="text" class="form-control" id="marca" name="marca" value="{{ $producto->marca }}">
       </div>
       <div class="form-group">
         <label for="material" class="form-label">Material</label>
-        <input type="text" class="form-control" id="material" name="material" value="{{ $producto->material }}>
+        <input type="text" class="form-control" id="material" name="material" value="{{ $producto->material }}">
       </div>
       <div class="form-group">
         <label for="talla" class="form-label">Talla</label>
-        <input type="text" class="form-control" id="talla" name="talla" value="{{ $producto->talla }}>
+        <input type="text" class="form-control" id="talla" name="talla" value="{{ $producto->talla }}">
       </div>
       <div class="form-group">
         <label for="precio" class="form-label">Precio</label>
-        <input type="number" class="form-control" id="precio" name="precio" value="{{ $producto->precio }}>
+        <input type="number" class="form-control" id="precio" name="precio" value="{{ $producto->precio }}">
       </div>
       <div class="form-group">
         <label for="stock" class="form-label">Cantidad Existente</label>
-        <input type="number" class="form-control" id="stock" name="stock" value="{{ $producto->stock }}>
+        <input type="number" class="form-control" id="stock" name="stock" value="{{ $producto->stock }}">
       </div>
     </div>
     <!-- /.card-body -->
