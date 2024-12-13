@@ -4,13 +4,13 @@
 
 <div class="row mb-2">
     <div class="col-sm-6">
-      <h1 class="m-0 text-dark">EDITAR CATEGORIA</h1>
+      <h1 class="m-0 text-dark">NUEVA CATEGORIA</h1>
     </div><!-- /.col -->
     <div class="col-sm-6">
       <ol class="breadcrumb float-sm-right">
         <li class="breadcrumb-item"><a href="{{ route('admin') }}">Inicio</a></li>
-        <li class="breadcrumb-item"><a href="{{ route('categorias.index') }}">Categoría</a></li>
-        <li class="breadcrumb-item active">{{ $categoria->nombre }}</li>
+        <li class="breadcrumb-item"><a href="{{ route('clientes.index') }}">Clientes</a></li>
+        <li class="breadcrumb-item active">Nuevo</li>
       </ol>
     </div><!-- /.col -->
   </div><!-- /.row -->
@@ -25,9 +25,8 @@
   <!-- /.card-header -->
   <!-- form start -->
 
-  <form action="{{ route('categorias.update', $categoria->id) }}" method="POST">
-      @csrf
-      @method('PUT')
+  <form action="{{ route('clientes.store') }}" method="post">
+    @csrf
     <div class="card-body">
       @if ($errors->any())
           <div class="alert alert-danger alert-dismissible">
@@ -40,26 +39,29 @@
           </div>
       @endif
       <div class="form-group">
-        <label for="id" class="form-label">
-           ID # {{ $categoria->id }}
-        </label>
+        <label for="Nombres" class="form-label">Nombres</label>
+        <input type="text" class="form-control" id="Nombres" name="Nombres">
       </div>
       <div class="form-group">
-        <label for="nombre" class="form-label">Nombre</label>
-        <input type="text" class="form-control" id="nombre" name="nombre" value="{{ $categoria->nombre }}">
+        <label for="Apellidos" class="form-label">Apellidos</label>
+        <input type="text" class="form-control" id="Apellidos" name="Apellidos">
       </div>
       <div class="form-group">
-        <label for="ocultar" class="form-label">Mostrar</label>
-        <select class="custom-select" id="ocultar" name="ocultar">
-          <option value="0" {{ $categoria->ocultar == 0 ? 'selected' : '' }}>Visible</option>
-          <option value="1" {{ $categoria->ocultar == 1 ? 'selected' : '' }}>No visible</option>
-        </select>
+        <label for="Correo" class="form-label">Correo</label>
+        <input type="text" class="form-control" id="Correo" name="Correo">
+      </div>
+      <div class="form-group">
+        <label for="Contraseña" class="form-label">Contraseña</label>
+        <input type="password" class="form-control" id="Contraseña" name="Contraseña">
+      </div>
+      <div class="form-group">
+        <label for="Direccion" class="form-label">Direccion</label>
+        <input type="text" class="form-control" id="Direccion" name="Direccion">
       </div>
     </div>
     <!-- /.card-body -->
-
     <div class="card-footer">
-      <button type="submit" class="btn btn-success">Actualizar</button>
+      <button type="submit" class="btn btn-success">Guardar</button>
     </div>
   </form>
 </div>

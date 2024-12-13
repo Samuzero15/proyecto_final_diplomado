@@ -4,6 +4,7 @@ use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CategoriaController;
 use App\Http\Controllers\ProductoController;
+use App\Http\Controllers\ClienteController;
 
 /*
 |--------------------------------------------------------------------------
@@ -47,14 +48,18 @@ Route::get('/', function () {
 })->name('home');  
 
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
+Route::get('/admin', function () {
+    return view('admin.index');
+})->middleware(['auth', 'verified'])->name('admin');
 
 Route::resource('/admin/categorias',CategoriaController::class)->names('categorias');
 Route::resource('/admin/productos',ProductoController::class)->names('productos');
+Route::resource('/admin/clientes',ClienteController::class)->names('clientes');
+
 Route::get('/productos/reporte', [ProductoController::class, 'generarReporte'])->name('productos.reporte');
 Route::get('/categorias/reporte', [CategoriaController::class, 'generarReporte'])->name('categoria.reporte');
+Route::get('/clientes/reporte', [ClienteController::class, 'generarReporte'])->name('clientes.reporte');
+
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');

@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Models\Cliente;
-use Illuminate\Http\Request;
+use App\Http\Requests\StoreClienteRequest;
+use App\Http\Requests\UpdateClienteRequest;
+use PDF;
 
 class ClienteController extends Controller
 {
@@ -13,6 +15,8 @@ class ClienteController extends Controller
     public function index()
     {
         //
+        $clientes = Cliente::orderBy('id')->paginate(15);
+        return view('admin.clientes.index', compact('clientes'));
     }
 
     /**
@@ -20,15 +24,27 @@ class ClienteController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.clientes.crear');
     }
 
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+    public function store(StoreClienteRequest $request)
     {
-        //
+        $validated = $request->validated();
+
+        // Crear la categoría, con 'ocultar' convertido a booleano
+        Cliente::create([
+            'Nombres' => $validated['Nombres'],
+            'Apellidos' => $validated['Apellidos'],
+            'Correo' => $validated['Correo'],
+            'Direccion' => $validated['Direccion'],
+            'Contraseña' => $validated['Contraseña'],
+        ]);
+
+        return redirect()->route('clientes.index')
+                         ->with('mensaje', 'Cliente creado exitosamente.');
     }
 
     /**
@@ -36,7 +52,7 @@ class ClienteController extends Controller
      */
     public function show(Cliente $cliente)
     {
-        //
+        return view('admin.clientes.mostrar', compact('cliente'));
     }
 
     /**
@@ -44,15 +60,16 @@ class ClienteController extends Controller
      */
     public function edit(Cliente $cliente)
     {
-        //
+        return view('admin.clientes.editar', compact('cliente'));
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Cliente $cliente)
+    public function update(UpdateClienteRequest $request, Cliente $cliente)
     {
-        //
+        $cliente->update($request->validated());
+        return redirect()->route('clientes.index')->with('mensaje', 'Cliente actualizado exitosamente.');
     }
 
     /**
@@ -60,6 +77,14 @@ class ClienteController extends Controller
      */
     public function destroy(Cliente $cliente)
     {
-        //
+        $cliente->delete();
+        return redirect()->route('clientes.index')->with('mensaje', 'Cliente eliminado exitosamente.');
+    }
+
+    public function generarReporte()
+    {
+        $clientes = Cliente::all(); // Obtener todos los productos con sus categorías
+        $pdf = PDF::loadView('admin.clientes.reporte', compact('clientes')); // Cargar la vista del reporte
+        return $pdf->download('reporte_clientes.pdf'); // Descargar el PDF
     }
 }

@@ -9,6 +9,16 @@ class Cliente extends Model
 {
     use HasFactory;
     /**
+     * El protected $fillable nos permite indicarle a Laravel
+     * cuales son los campos que se le permitirá almacenar en la Tabla
+     * correspondiente en la base de datos
+     * @var array
+     */
+    protected $fillable = [
+        'Nombres', 'Apellidos', 'Correo', 'Direccion', 'Contraseña'
+    ];
+
+    /**
      * Get the carro associated with the Cliente
      *
      * @return \Illuminate\Database\Eloquent\Relations\HasOne

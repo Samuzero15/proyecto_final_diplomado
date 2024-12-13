@@ -8,7 +8,7 @@
     </div><!-- /.col -->
     <div class="col-sm-6">
       <ol class="breadcrumb float-sm-right">
-        <li class="breadcrumb-item active"><a href="{{ route('dashboard') }}">Inicio</a></li>
+        <li class="breadcrumb-item active"><a href="{{ route('admin') }}">Inicio</a></li>
       </ol>
     </div><!-- /.col -->
   </div><!-- /.row -->
