@@ -13,11 +13,14 @@ return new class extends Migration
     {
         Schema::create('facturas', function (Blueprint $table) {
             $table->id();
-            $table->foreign('id_cliente')->references('id')->on('clientes');
-            $table->foreign('id_producto')->references('id')->on('productos');
+            $table->bigInteger('id_cliente')->unsigned();
+            $table->bigInteger('id_producto')->unsigned();
             $table->integer('cantidad')->unsigned()->default(0);
             $table->integer('total')->unsigned()->default(0);
             $table->timestamps();
+
+            $table->foreign('id_cliente')->references('id')->on('clientes');
+            $table->foreign('id_producto')->references('id')->on('productos');
         });
     }
 

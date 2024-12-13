@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Models\Categoria;
-use Illuminate\Http\Request;
+use App\Http\Requests\StoreCategoriaRequest;
+use App\Http\Requests\UpdateCategoriaRequest;
+use PDF;
 
 class CategoriaController extends Controller
 {
@@ -12,54 +14,73 @@ class CategoriaController extends Controller
      */
     public function index()
     {
-        //
+        $categorias = Categoria::orderBy('id', 'desc')->paginate(15);
+        return view('admin.categorias.index', compact('categorias'));
+
+        //$categorias = Categoria::all();
+        //return view('admin.categorias.index', ['categorias' => $categorias]);
     }
 
-    /**
-     * Show the form for creating a new resource.
-     */
+
     public function create()
     {
-        //
+        return view('admin.categorias.crear');
     }
 
-    /**
-     * Store a newly created resource in storage.
-     */
-    public function store(Request $request)
+    public function store(StoreCategoriaRequest $request)
     {
-        //
+        // Obtener los datos validados
+        $validated = $request->validated();
+
+        // Crear la categoría, con 'ocultar' convertido a booleano
+        Categoria::create([
+            'nombre' => $validated['nombre'],
+            'ocultar' => $validated['ocultar']
+        ]);
+
+        return redirect()->route('categorias.index')
+                         ->with('mensaje', 'Categoría creada exitosamente.');
     }
 
-    /**
-     * Display the specified resource.
-     */
+
     public function show(Categoria $categoria)
     {
-        //
+        return view('admin.categorias.mostrar', compact('categoria'));
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     */
     public function edit(Categoria $categoria)
     {
-        //
+        return view('admin.categorias.editar', compact('categoria'));
     }
 
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(Request $request, Categoria $categoria)
+
+    public function update(UpdateCategoriaRequest $request, $id)
     {
-        //
+        $categoria = Categoria::findOrFail($id);
+
+        $validated = $request->validated();
+
+        $categoria->update([
+            'nombre' => $validated['nombre'],
+            'ocultar' => $validated['ocultar'],  
+        ]);
+
+        // Redirigir de vuelta con mensaje de éxito
+        return redirect()->route('categorias.index')
+                         ->with('mensaje', 'Categoría actualizada exitosamente.');
     }
 
-    /**
-     * Remove the specified resource from storage.
-     */
+
     public function destroy(Categoria $categoria)
     {
-        //
+        $categoria->delete();
+        return redirect()->route('categorias.index')->with('mensaje','Categoria eliminada exitosamente');
+    }
+
+    public function generarReporte()
+    {
+        $categorias = Categoria::orderBy('id', 'desc')->get(); // Obtener todos los productos con sus categorías
+        $pdf = PDF::loadView('admin.categorias.reporte', compact('categorias')); // Cargar la vista del reporte
+        return $pdf->download('reporte_categorias.pdf'); // Descargar el PDF
     }
 }
