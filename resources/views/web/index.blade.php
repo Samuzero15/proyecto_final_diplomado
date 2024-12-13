@@ -28,10 +28,10 @@
 				<!-- Collect the nav links, forms, and other content for toggling -->
 				<div class="collapse navbar-collapse menu--shylock" id="bs-example-navbar-collapse-1">
 				  <ul class="nav navbar-nav menu__list">
-					<li class="active menu__item menu__item--current"><a class="menu__link" href="{{ route('home') }}">Home <span class="sr-only">(current)</span></a></li>
-					<li class=" menu__item"><a class="menu__link" href="{{ route('web.pages.about') }}">About</a></li>
+					<li class="active menu__item menu__item--current"><a class="menu__link" href="{{ route('home') }}">Inicio <span class="sr-only">(current)</span></a></li>
+					<li class=" menu__item"><a class="menu__link" href="{{ route('web.pages.about') }}">Nosotros</a></li>
 					<li class="dropdown menu__item">
-						<a href="#" class="dropdown-toggle menu__link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Men's wear <span class="caret"></span></a>
+						<a href="#" class="dropdown-toggle menu__link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Hombres <span class="caret"></span></a>
 							<ul class="dropdown-menu multi-column columns-3">
 								<div class="agile_inner_drop_nav_info">
 									<div class="col-sm-6 multi-gd-img1 multi-gd-text ">
@@ -39,24 +39,16 @@
 									</div>
 									<div class="col-sm-3 multi-gd-img">
 										<ul class="multi-column-dropdown">
-											<li><a href="{{ route('web.pages.mens') }}">Clothing</a></li>
-											<li><a href="{{ route('web.pages.mens') }}">Wallets</a></li>
-											<li><a href="{{ route('web.pages.mens') }}">Footwear</a></li>
-											<li><a href="{{ route('web.pages.mens') }}">Watches</a></li>
-											<li><a href="{{ route('web.pages.mens') }}">Accessories</a></li>
-											<li><a href="{{ route('web.pages.mens') }}">Bags</a></li>
-											<li><a href="{{ route('web.pages.mens') }}">Caps & Hats</a></li>
+											<li><a href="{{ route('web.pages.mens') }}">Ropa</a></li>
+											<li><a href="{{ route('web.pages.mens') }}">Accesorios</a></li>
+											<li><a href="{{ route('web.pages.mens') }}">Bolsos</a></li>
 										</ul>
 									</div>
 									<div class="col-sm-3 multi-gd-img">
 										<ul class="multi-column-dropdown">
-											<li><a href="{{ route('web.pages.mens') }}">Jewellery</a></li>
-											<li><a href="{{ route('web.pages.mens') }}">Sunglasses</a></li>
-											<li><a href="{{ route('web.pages.mens') }}">Perfumes</a></li>
-											<li><a href="{{ route('web.pages.mens') }}">Beauty</a></li>
-											<li><a href="{{ route('web.pages.mens') }}">Shirts</a></li>
-											<li><a href="{{ route('web.pages.mens') }}">Sunglasses</a></li>
-											<li><a href="{{ route('web.pages.mens') }}">Swimwear</a></li>
+											<li><a href="{{ route('web.pages.mens') }}">Camisetas</a></li>
+											<li><a href="{{ route('web.pages.mens') }}">Lentes</a></li>
+											<li><a href="{{ route('web.pages.mens') }}">Sueteres</a></li>
 										</ul>
 									</div>
 									<div class="clearfix"></div>
@@ -64,29 +56,22 @@
 							</ul>
 					</li>
 					<li class="dropdown menu__item">
-						<a href="#" class="dropdown-toggle menu__link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Women's wear <span class="caret"></span></a>
+						<a href="#" class="dropdown-toggle menu__link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Mujeres <span class="caret"></span></a>
 							<ul class="dropdown-menu multi-column columns-3">
 								<div class="agile_inner_drop_nav_info">
 									<div class="col-sm-3 multi-gd-img">
 										<ul class="multi-column-dropdown">
-											<li><a href="{{ route('web.pages.womens') }}">Clothing</a></li>
-											<li><a href="{{ route('web.pages.womens') }}">Wallets</a></li>
-											<li><a href="{{ route('web.pages.womens') }}">Footwear</a></li>
-											<li><a href="{{ route('web.pages.womens') }}">Watches</a></li>
-											<li><a href="{{ route('web.pages.womens') }}">Accessories</a></li>
-											<li><a href="{{ route('web.pages.womens') }}">Bags</a></li>
-											<li><a href="{{ route('web.pages.womens') }}">Caps & Hats</a></li>
+											<li><a href="{{ route('web.pages.womens') }}">Ropa</a></li>
+											<li><a href="{{ route('web.pages.womens') }}">Accesorios</a></li>
+											<li><a href="{{ route('web.pages.womens') }}">Bolsos</a></li>
 										</ul>
 									</div>
 									<div class="col-sm-3 multi-gd-img">
 										<ul class="multi-column-dropdown">
-											<li><a href="{{ route('web.pages.womens') }}">Jewellery</a></li>
-											<li><a href="{{ route('web.pages.womens') }}">Sunglasses</a></li>
-											<li><a href="{{ route('web.pages.womens') }}">Perfumes</a></li>
-											<li><a href="{{ route('web.pages.womens') }}">Beauty</a></li>
-											<li><a href="{{ route('web.pages.womens') }}">Shirts</a></li>
-											<li><a href="{{ route('web.pages.womens') }}">Sunglasses</a></li>
-											<li><a href="{{ route('web.pages.womens') }}">Swimwear</a></li>
+											<li><a href="{{ route('web.pages.womens') }}">Maquillaje</a></li>
+											<li><a href="{{ route('web.pages.womens') }}">Camisetas</a></li>
+											<li><a href="{{ route('web.pages.womens') }}">Lentes</a></li>
+											<li><a href="{{ route('web.pages.womens') }}">Sueteres</a></li>
 										</ul>
 									</div>
 									<div class="col-sm-6 multi-gd-img multi-gd-text ">
@@ -96,14 +81,7 @@
 								</div>
 							</ul>
 					</li>
-					<li class="menu__item dropdown">
-					   <a class="menu__link" href="#" class="dropdown-toggle" data-toggle="dropdown">Short Codes <b class="caret"></b></a>
-								<ul class="dropdown-menu agile_short_dropdown">
-									<li><a href="{{ route('web.pages.icons') }}">Web Icons</a></li>
-									<li><a href="{{ route('web.pages.typography') }}">Typography</a></li>
-								</ul>
-					</li>
-					<li class=" menu__item"><a class="menu__link" href="{{ route('web.pages.contact') }}">Contact</a></li>
+					<li class=" menu__item"><a class="menu__link" href="{{ route('web.pages.contact') }}">Contacto</a></li>
 				  </ul>
 				</div>
 			  </div>
@@ -133,16 +111,16 @@
 					</div>
 						<div class="modal-body modal-body-sub_agile">
 						<div class="col-md-8 modal_body_left modal_body_left1">
-						<h3 class="agileinfo_sign">Sign In <span>Now</span></h3>
+						<h3 class="agileinfo_sign">Iniciar sesion<span>Ahora</span></h3>
 									<form action="#" method="post">
 							<div class="styled-input agile-styled-input-top">
 								<input type="text" name="Name" required="">
-								<label>Name</label>
+								<label>Nombre</label>
 								<span></span>
 							</div>
 							<div class="styled-input">
 								<input type="email" name="Email" required=""> 
-								<label>Email</label>
+								<label>Correo</label>
 								<span></span>
 							</div> 
 							<input type="submit" value="Sign In">
@@ -162,7 +140,7 @@
 																  <div class="back"><i class="fa fa-linkedin" aria-hidden="true"></i></div></a></li>
 														</ul>
 														<div class="clearfix"></div>
-														<p><a href="#" data-toggle="modal" data-target="#myModal2" > Don't have an account?</a></p>
+														<p><a href="#" data-toggle="modal" data-target="#myModal2" > No tienes cuenta?</a></p>
 
 						</div>
 						<div class="col-md-4 modal_body_right modal_body_right1">
@@ -185,26 +163,26 @@
 					</div>
 						<div class="modal-body modal-body-sub_agile">
 						<div class="col-md-8 modal_body_left modal_body_left1">
-						<h3 class="agileinfo_sign">Sign Up <span>Now</span></h3>
+						<h3 class="agileinfo_sign">Registrate<span>Ahora</span></h3>
 						 <form action="#" method="post">
 							<div class="styled-input agile-styled-input-top">
 								<input type="text" name="Name" required="">
-								<label>Name</label>
+								<label>Nombre</label>
 								<span></span>
 							</div>
 							<div class="styled-input">
 								<input type="email" name="Email" required=""> 
-								<label>Email</label>
+								<label>Correo</label>
 								<span></span>
 							</div> 
 							<div class="styled-input">
 								<input type="password" name="password" required=""> 
-								<label>Password</label>
+								<label>Contraseña</label>
 								<span></span>
 							</div> 
 							<div class="styled-input">
 								<input type="password" name="Confirm Password" required=""> 
-								<label>Confirm Password</label>
+								<label>Confirmar Contraseña</label>
 								<span></span>
 							</div> 
 							<input type="submit" value="Sign Up">
@@ -224,7 +202,7 @@
 																  <div class="back"><i class="fa fa-linkedin" aria-hidden="true"></i></div></a></li>
 														</ul>
 														<div class="clearfix"></div>
-														<p><a href="#">By clicking register, I agree to your terms</a></p>
+														<p><a href="#">Al registrarte aceptas nuestros términos</a></p>
 
 						</div>
 						<div class="col-md-4 modal_body_right modal_body_right1">
@@ -425,10 +403,10 @@
 		    <h3 class="wthree_text_info">New <span>Arrivals</span></h3>		
 				<div id="horizontalTab">
 						<ul class="resp-tabs-list">
-							<li> Men's</li>
-							<li> Women's</li>
-							<li> Bags</li>
-							<li> Footwear</li>
+							<li> Hombres</li>
+							<li> Mujeres</li>
+							<li> Bolsos</li>
+							<li> Zapatos</li>
 						</ul>
 					<div class="resp-tabs-container">
 					<!--/tab_one-->
@@ -447,7 +425,7 @@
 											
 									</div>
 									<div class="item-info-product ">
-										<h4><a href="{{ route('web.pages.single') }}">Formal Blue Shirt</a></h4>
+										<h4><a href="{{ route('web.pages.single') }}">...</a></h4>
 										<div class="info-product-price">
 											<span class="item_price">$45.99</span>
 											<del>$69.71</del>
@@ -486,7 +464,7 @@
 											
 									</div>
 									<div class="item-info-product ">
-										<h4><a href="{{ route('web.pages.single') }}">Gabi Full Sleeve Sweatshirt</a></h4>
+										<h4><a href="{{ route('web.pages.single') }}">...</a></h4>
 										<div class="info-product-price">
 											<span class="item_price">$45.99</span>
 											<del>$69.71</del>
@@ -564,7 +542,7 @@
 											
 									</div>
 									<div class="item-info-product ">
-										<h4><a href="{{ route('web.pages.single') }}">Round Neck Black T-Shirt</a></h4>
+										<h4><a href="{{ route('web.pages.single') }}">...</a></h4>
 										<div class="info-product-price">
 											<span class="item_price">$190.99</span>
 											<del>$159.71</del>
@@ -603,7 +581,7 @@
 											
 									</div>
 									<div class="item-info-product ">
-										<h4><a href="{{ route('web.pages.single') }}">Men's Black Jeans</a></h4>
+										<h4><a href="{{ route('web.pages.single') }}">...</a></h4>
 										<div class="info-product-price">
 											<span class="item_price">$60.99</span>
 											<del>$90.71</del>
@@ -642,7 +620,7 @@
 											
 									</div>
 									<div class="item-info-product ">
-										<h4><a href="{{ route('web.pages.single') }}">Analog Watch</a></h4>
+										<h4><a href="{{ route('web.pages.single') }}">...</a></h4>
 										<div class="info-product-price">
 											<span class="item_price">$160.99</span>
 											<del>$290.71</del>
@@ -681,7 +659,7 @@
 											
 									</div>
 									<div class="item-info-product ">
-										<h4><a href="{{ route('web.pages.single') }}">Reversible Belt</a></h4>
+										<h4><a href="{{ route('web.pages.single') }}">...</a></h4>
 										<div class="info-product-price">
 											<span class="item_price">$30.99</span>
 											<del>$50.71</del>
@@ -720,7 +698,7 @@
 											
 									</div>
 									<div class="item-info-product ">
-										<h4><a href="{{ route('web.pages.single') }}">Party Men's Blazer</a></h4>
+										<h4><a href="{{ route('web.pages.single') }}">...</a></h4>
 										<div class="info-product-price">
 											<span class="item_price">$260.99</span>
 											<del>$390.71</del>
@@ -764,7 +742,7 @@
 											
 									</div>
 									<div class="item-info-product ">
-										<h4><a href="{{ route('web.pages.single') }}">A-line Black Skirt</a></h4>
+										<h4><a href="{{ route('web.pages.single') }}">...</a></h4>
 										<div class="info-product-price">
 											<span class="item_price">$130.99</span>
 											<del>$189.71</del>
@@ -803,7 +781,7 @@
 											
 									</div>
 									<div class="item-info-product ">
-										<h4><a href="{{ route('web.pages.single') }}">Sleeveless Solid Blue Top</a></h4>
+										<h4><a href="{{ route('web.pages.single') }}">...</a></h4>
 										<div class="info-product-price">
 											<span class="item_price">$140.99</span>
 											<del>$189.71</del>
@@ -842,7 +820,7 @@
 											
 									</div>
 									<div class="item-info-product ">
-										<h4><a href="{{ route('web.pages.single') }}">Skinny Jeans</a></h4>
+										<h4><a href="{{ route('web.pages.single') }}">...</a></h4>
 										<div class="info-product-price">
 											<span class="item_price">$150.99</span>
 											<del>$189.71</del>
@@ -881,7 +859,7 @@
 											
 									</div>
 									<div class="item-info-product ">
-										<h4><a href="{{ route('web.pages.single') }}">Black Basic Shorts</a></h4>
+										<h4><a href="{{ route('web.pages.single') }}">...</a></h4>
 										<div class="info-product-price">
 											<span class="item_price">$120.99</span>
 											<del>$189.71</del>
@@ -920,7 +898,7 @@
 											
 									</div>
 									<div class="item-info-product ">
-										<h4><a href="{{ route('web.pages.single') }}">Pink Track Pants</a></h4>
+										<h4><a href="{{ route('web.pages.single') }}">...</a></h4>
 										<div class="info-product-price">
 											<span class="item_price">$220.99</span>
 											<del>$389.71</del>
@@ -959,7 +937,7 @@
 											
 									</div>
 									<div class="item-info-product ">
-										<h4><a href="{{ route('web.pages.single') }}">Analog Watch</a></h4>
+										<h4><a href="{{ route('web.pages.single') }}">...</a></h4>
 										<div class="info-product-price">
 											<span class="item_price">$320.99</span>
 											<del>$489.71</del>
@@ -998,7 +976,7 @@
 											
 									</div>
 									<div class="item-info-product ">
-										<h4><a href="{{ route('web.pages.single') }}">Ankle Length Socks</a></h4>
+										<h4><a href="{{ route('web.pages.single') }}">...</a></h4>
 										<div class="info-product-price">
 											<span class="item_price">$100.99</span>
 											<del>$159.71</del>
@@ -1037,7 +1015,7 @@
 											
 									</div>
 									<div class="item-info-product ">
-										<h4><a href="{{ route('web.pages.single') }}">Reebok Women's Tights</a></h4>
+										<h4><a href="{{ route('web.pages.single') }}">...</a></h4>
 										<div class="info-product-price">
 											<span class="item_price">$130.99</span>
 											<del>$169.71</del>
@@ -1081,7 +1059,7 @@
 											
 									</div>
 									<div class="item-info-product ">
-										<h4><a href="{{ route('web.pages.single') }}">Laptop Messenger Bag</a></h4>
+										<h4><a href="{{ route('web.pages.single') }}">...</a></h4>
 										<div class="info-product-price">
 											<span class="item_price">$140.99</span>
 											<del>$169.71</del>
@@ -1120,7 +1098,7 @@
 											
 									</div>
 									<div class="item-info-product ">
-										<h4><a href="{{ route('web.pages.single') }}">Puma Backpack</a></h4>
+										<h4><a href="{{ route('web.pages.single') }}">...</a></h4>
 										<div class="info-product-price">
 											<span class="item_price">$127.99</span>
 											<del>$169.71</del>
@@ -1159,7 +1137,7 @@
 											
 									</div>
 									<div class="item-info-product ">
-										<h4><a href="{{ route('web.pages.single') }}"> Laptop Backpack</a></h4>
+										<h4><a href="{{ route('web.pages.single') }}"> ...</a></h4>
 										<div class="info-product-price">
 											<span class="item_price">$120.99</span>
 											<del>$189.71</del>
@@ -1198,7 +1176,7 @@
 											
 									</div>
 									<div class="item-info-product ">
-										<h4><a href="{{ route('web.pages.single') }}">Travel Duffel Bag </a></h4>
+										<h4><a href="{{ route('web.pages.single') }}">... </a></h4>
 										<div class="info-product-price">
 											<span class="item_price">$190.99</span>
 											<del>$259.71</del>
@@ -1237,7 +1215,7 @@
 											
 									</div>
 									<div class="item-info-product ">
-										<h4><a href="{{ route('web.pages.single') }}"> Hand-held Bag </a></h4>
+										<h4><a href="{{ route('web.pages.single') }}"> ... </a></h4>
 										<div class="info-product-price">
 											<span class="item_price">$190.99</span>
 											<del>$259.71</del>
@@ -1276,7 +1254,7 @@
 											
 									</div>
 									<div class="item-info-product ">
-										<h4><a href="{{ route('web.pages.single') }}">Butterflies Bag </a></h4>
+										<h4><a href="{{ route('web.pages.single') }}">... </a></h4>
 										<div class="info-product-price">
 											<span class="item_price">$190.99</span>
 											<del>$259.71</del>
@@ -1315,7 +1293,7 @@
 											
 									</div>
 									<div class="item-info-product ">
-										<h4><a href="{{ route('web.pages.single') }}">Costa Swiss Bag </a></h4>
+										<h4><a href="{{ route('web.pages.single') }}">... </a></h4>
 										<div class="info-product-price">
 											<span class="item_price">$290.99</span>
 											<del>$359.71</del>
@@ -1354,7 +1332,7 @@
 											
 									</div>
 									<div class="item-info-product ">
-										<h4><a href="{{ route('web.pages.single') }}">Noble Designs Bag </a></h4>
+										<h4><a href="{{ route('web.pages.single') }}">... </a></h4>
 										<div class="info-product-price">
 											<span class="item_price">$120.99</span>
 											<del>$159.71</del>
@@ -1397,7 +1375,7 @@
 											
 									</div>
 									<div class="item-info-product ">
-										<h4><a href="{{ route('web.pages.single') }}">Running Shoes</a></h4>
+										<h4><a href="{{ route('web.pages.single') }}">...</a></h4>
 										<div class="info-product-price">
 											<span class="item_price">$80.99</span>
 											<del>$89.71</del>
@@ -1436,7 +1414,7 @@
 											
 									</div>
 									<div class="item-info-product ">
-										<h4><a href="{{ route('web.pages.single') }}">Shoetopia Lace Up</a></h4>
+										<h4><a href="{{ route('web.pages.single') }}">...</a></h4>
 										<div class="info-product-price">
 											<span class="item_price">$90.99</span>
 											<del>$59.71</del>
@@ -1475,7 +1453,7 @@
 											
 									</div>
 									<div class="item-info-product ">
-										<h4><a href="{{ route('web.pages.single') }}">Steemo Casuals(Black)</a></h4>
+										<h4><a href="{{ route('web.pages.single') }}">...</a></h4>
 										<div class="info-product-price">
 											<span class="item_price">$90.99</span>
 											<del>$59.71</del>
@@ -1514,7 +1492,7 @@
 											
 									</div>
 									<div class="item-info-product ">
-										<h4><a href="{{ route('web.pages.single') }}">Benetton Flip Flops</a></h4>
+										<h4><a href="{{ route('web.pages.single') }}">...</a></h4>
 										<div class="info-product-price">
 											<span class="item_price">$40.99</span>
 											<del>$99.71</del>
@@ -1553,7 +1531,7 @@
 											
 									</div>
 									<div class="item-info-product ">
-										<h4><a href="{{ route('web.pages.single') }}">Moonwalk Bellies </a></h4>
+										<h4><a href="{{ route('web.pages.single') }}">... </a></h4>
 										<div class="info-product-price">
 											<span class="item_price">$80.99</span>
 											<del>$99.71</del>
@@ -1592,7 +1570,7 @@
 											
 									</div>
 									<div class="item-info-product ">
-										<h4><a href="{{ route('web.pages.single') }}">Aero Canvas Loafers  </a></h4>
+										<h4><a href="{{ route('web.pages.single') }}">...  </a></h4>
 										<div class="info-product-price">
 											<span class="item_price">$120.99</span>
 											<del>$199.71</del>
@@ -1631,7 +1609,7 @@
 											
 									</div>
 									<div class="item-info-product ">
-										<h4><a href="{{ route('web.pages.single') }}">Sparx Sporty Canvas Shoes</a></h4>
+										<h4><a href="{{ route('web.pages.single') }}">...</a></h4>
 										<div class="info-product-price">
 											<span class="item_price">$160.99</span>
 											<del>$199.71</del>
@@ -1670,7 +1648,7 @@
 											
 									</div>
 									<div class="item-info-product ">
-										<h4><a href="{{ route('web.pages.single') }}">Women BLACK Heels</a></h4>
+										<h4><a href="{{ route('web.pages.single') }}">...</a></h4>
 										<div class="info-product-price">
 											<span class="item_price">$180.99</span>
 											<del>$199.71</del>

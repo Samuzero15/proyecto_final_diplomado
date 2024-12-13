@@ -1,7 +1,7 @@
 <div class="footer">
 	<div class="footer_agile_inner_info_w3l">
 		<div class="col-md-3 footer-left">
-			<h2><a href="index.html"><span>E</span>lite Shoppy </a></h2>
+			<h2><a href="index.html"><span>MANIATIKZ</span></a></h2>
 			<p>Lorem ipsum quia dolor
 			sit amet, consectetur, adipisci velit, sed quia non 
 			numquam eius modi tempora.</p>
@@ -25,12 +25,11 @@
 				<div class="col-md-4 sign-gd">
 					<h4>Our <span>Information</span> </h4>
 					<ul>
-						<li><a href="index.html">Home</a></li>
-						<li><a href="mens.html">Men's Wear</a></li>
-						<li><a href="womens.html">Women's wear</a></li>
-						<li><a href="about.html">About</a></li>
-						<li><a href="typography.html">Short Codes</a></li>
-						<li><a href="contact.html">Contact</a></li>
+						<li><a href="index.html">Inicio</a></li>
+						<li><a href="mens.html">Hombres</a></li>
+						<li><a href="womens.html">Mujeres</a></li>
+						<li><a href="about.html">Nosotros</a></li>
+						<li><a href="contact.html">Contacto</a></li>
 					</ul>
 				</div>
 				
@@ -63,27 +62,13 @@
 							</div>
 							<div class="w3-address-right">
 								<h6>Location</h6>
-								<p>Broome St, NY 10002,California, USA. 
+								<p>...
 								
 								</p>
 							</div>
 							<div class="clearfix"> </div>
 						</div>
 					</div>
-				</div>
-				<div class="col-md-3 sign-gd flickr-post">
-					<h4>Flickr <span>Posts</span></h4>
-					<ul>
-						<li><a href="single.html"><img src="images/t1.jpg" alt=" " class="img-responsive" /></a></li>
-						<li><a href="single.html"><img src="images/t2.jpg" alt=" " class="img-responsive" /></a></li>
-						<li><a href="single.html"><img src="images/t3.jpg" alt=" " class="img-responsive" /></a></li>
-						<li><a href="single.html"><img src="images/t4.jpg" alt=" " class="img-responsive" /></a></li>
-						<li><a href="single.html"><img src="images/t1.jpg" alt=" " class="img-responsive" /></a></li>
-						<li><a href="single.html"><img src="images/t2.jpg" alt=" " class="img-responsive" /></a></li>
-						<li><a href="single.html"><img src="images/t3.jpg" alt=" " class="img-responsive" /></a></li>
-						<li><a href="single.html"><img src="images/t2.jpg" alt=" " class="img-responsive" /></a></li>
-						<li><a href="single.html"><img src="images/t4.jpg" alt=" " class="img-responsive" /></a></li>
-					</ul>
 				</div>
 				<div class="clearfix"></div>
 			</div>
