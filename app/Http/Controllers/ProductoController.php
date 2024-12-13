@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\StoreProductRequest;
 use App\Http\Requests\UpdateProductRequest;
+use App\Http\Requests\ProductSearchRequest;
 use App\Models\Categoria;
 use App\Models\Producto;
 use Illuminate\Http\Request;
@@ -14,10 +15,16 @@ class ProductoController extends Controller
     /**
      * Display a listing of the products.
      */
-    public function index()
+    public function index(ProductSearchRequest $request)
     {
-        // $products = Product::with('categorias')->get();
-        $productos = Producto::orderBy('id', 'desc')->paginate(15);
+        $query = Producto::query();
+
+        if ($request->has('search') && $request->search != '') {
+            $query->where('nombre', 'LIKE', '%' . $request->search . '%');
+        }
+
+        $productos = $query->paginate(10);
+
         return view('admin.productos.index', compact('productos'));
     }
 

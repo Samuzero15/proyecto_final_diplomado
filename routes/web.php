@@ -46,9 +46,9 @@ Route::get('/', function () {
     return view('web.index'); 
 })->name('home');  
 
-
+//Ruta para administrador
 Route::get('/dashboard', function () {
-    return view('dashboard');
+    return view('admin.index');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::resource('/admin/categorias',CategoriaController::class)->names('categorias');

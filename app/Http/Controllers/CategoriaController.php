@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Categoria;
 use App\Http\Requests\StoreCategoriaRequest;
 use App\Http\Requests\UpdateCategoriaRequest;
+use App\Http\Requests\CategorySearchRequest;
 use PDF;
 
 class CategoriaController extends Controller
@@ -12,13 +13,17 @@ class CategoriaController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index(CategorySearchRequest $request)
     {
-        $categorias = Categoria::orderBy('id', 'desc')->paginate(15);
-        return view('admin.categorias.index', compact('categorias'));
+        $query = Categoria::query();
 
-        //$categorias = Categoria::all();
-        //return view('admin.categorias.index', ['categorias' => $categorias]);
+        if ($request->has('search') && $request->search != '') {
+            $query->where('nombre', 'LIKE', '%' . $request->search . '%');
+        }
+
+        $categorias = $query->paginate(10);
+
+        return view('admin.categorias.index', compact('categorias'));
     }
 
 
